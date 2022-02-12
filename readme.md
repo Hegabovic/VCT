@@ -113,10 +113,7 @@ git log
 7. `git restore --staged` **Removes the file from the Staging Area, but leaves its actual modifications in working directory untouched**)
    * file will not be added in history
 ```sh
-74el el file w m4 7y7oto fel histry
  git restore --staged <file-name>
-
- restore it from tracked to untrackd 
 ```
 
 8. `git rm --cached` **removes a file from the staging area. The files from the working directory will remain intact**<br>
@@ -129,48 +126,11 @@ git log
 ```sh
   git rm --cached <file-name>
   ```
-
-
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-### config
-
-
-
-create folder named master when applying `git init`
-
-file added in staging area (file contains only `1 line of code`)
-then the file was modified in working directory (file contains only `2 line of code`)
-
-remove file from staging area and make it `untracked file`
-
+9. understanding `git restore` <br>
+* file added in staging area  (have 1 line)
+* modified file in `working dir` (have 2 lines)
+* want to go back to the file before new modifications use `git restore`
 ```sh
   git restore <file-name>
-  file added in staging area 
-  modified in the same file  in working directory
-  staging area have 1 line 
-  working dir have 2 lines 
-  will make it 1 
-  working dir updateed bezabt zy el staging area 
-  ```
-
-
-
-
-
-########################################
-
-# Remote repository
-
-there are many tools `GitHub` , `gitlab` , `bitbucket`
-
-https mode will require  `username - password`
-
-ssh public key of my machine and on GitHub trust this machine
-
-`git pull` to get modified files on your project
-
+ ```
+<p align="right">(<a href="#top">back to top</a>)</p>
