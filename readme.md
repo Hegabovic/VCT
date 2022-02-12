@@ -62,7 +62,7 @@
 5. push your project from local repository to remote repository
     - first time for repository creation
         - origin is alias for https link
-
+6- added my ismail
 ```sh
 git branch -M main
 git remote add origin 'URL'
