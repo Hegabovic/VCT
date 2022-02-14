@@ -134,3 +134,66 @@ git log
   git restore <file-name>
  ```
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+
+# Branching:
+master branch is the best version of your project (can be connected to server)
+
+
+when creating a branch, do it from master branch 
+## merging 
+
+create new branch and go to it 
+```html
+git checkout -b <new-branch-name>   // method1
+git switch -C <new-branch-name>     // method2
+git switch <branch-name>   // switch between branches
+```
+
+merge 2 branches in local machine first apply
+```html
+git switch <branch-name>
+```
+then merge it with the desired branch
+```html
+git merge <branch-name>
+```
+
+to show all commits with which branches 
+```html
+git log
+```
+show all branches in local and remote
+```html
+git branch -a 
+```
+
+`git fetch --all` get all untracked commits in remote, and you can see all of them <br>
+once you have chosen one to edit it<br>
+this branch is on local and up to date<br> 
+but if you already have it on your machine locally you will be required to `pull` the new changes (new commits)
+by applying `git pull` on this branch.
+```html
+git fetch --all
+```
+**So the Difference between `git pull` and `fetch all` is that:<br>**
+* `git fetch all` allows to only see changes without taking it to locally
+* `git pull` git pull = fetch  --all + all merge
+
+to delete branch
+```html
+git branch -D <branch-name>
+```
+
+to rename branch
+```html
+git branch -M <new-name>
+```
+
+
+
+## rebasing
+git stash 
+rollback
