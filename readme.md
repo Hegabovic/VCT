@@ -192,8 +192,45 @@ to rename branch
 git branch -M <new-name>
 ```
 
+# Difference between Rebasing and merging 
+
+## Merge:
+used to update the `master branch` with the added commits that a feature has.<br>
+when a feature require new commits from the main branch a merge process will be required from the main to the feature
+as the number of  the required commits in the feature branch increases more merge processes are required with additional commits
+that causes the history of the commits in the feature branch messy and untraceable<br>
+```html
+git checkout <feature-branch>
+```
+
+## Rebase:
+it's in its simplest definition the reassigning process of the `base of the branch` rather than merge the commits of the main branch
+`simply rebase the branch` to the `commit` that has features that serves your need in the branch<br>
+```html
+git rebase <branch that has the required commits>
+```
 
 
-## rebasing
-git stash 
-rollback
+# Difference between reset , reset --hard and revert
+
+## git revert 
+running that command puts the branch in the selected commit followed by a commit saving that revert
+in the history of the branch log
+```html
+git revert <commit to return-to id>
+```
+
+## git reset
+cancel that commit without deleting the added files or canceling the added modifications that added in the commit
+the reset process is not saved in the log of the branch
+
+```html
+git reset < commit that needed to canceled id>
+```
+## git reset --hard
+cancel that commit and delete any new files added in that commit and cancel any modifications in the files added in that commit
+the reset process is not saved in the log of the branch
+
+```html
+git reset --hard <commit that needed to cancled id>
+```
